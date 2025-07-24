@@ -21,7 +21,7 @@ export function buildWebpackConfig(options: BuildOptions): webpack.Configuration
         module: {
             rules: buildLoaders(options),
         },
-        resolve: buildResolve(),
+        resolve: buildResolve(options),
         devtool: isDev ? 'eval-cheap-source-map' : undefined,
         devServer: isDev ? buildDevServer(options) : undefined,
     }
