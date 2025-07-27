@@ -13,6 +13,7 @@ export function buildPlugins(options: BuildOptions) {
         new MiniCssExtractPlugin({
             filename: "css/[name].[contenhash:8].css", 
             chunkFilename: "css/[name].[contenhash:8].css"
-        })
+        }),
+        new webpack.HotModuleReplacementPlugin(),
     ]
 }

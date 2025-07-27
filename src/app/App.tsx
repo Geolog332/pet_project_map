@@ -8,10 +8,10 @@ import { Sidebar } from 'widgets/Sidebar';
 
 
 const App = () => {
-    const {theme} = useTheme()
+    const { theme } = useTheme()
     return (
         <div className={classNames('app', {}, [theme])}>
-        <Navbar />
+            <Navbar />
             <div className='content-page'>
                 <Sidebar />
                 <AppRouter/>
