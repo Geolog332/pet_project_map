@@ -6,10 +6,11 @@
     transition: width 0.3s;
 }
 
-.collapsed { 
+.collapsed {
     width: var(--sidebar-width-collapsed);
 }
-.switchers{
+
+.switchers {
     position: absolute;
     bottom: 20px;
     display: flex;
