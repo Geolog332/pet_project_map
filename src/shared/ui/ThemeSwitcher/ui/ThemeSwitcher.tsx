@@ -1,5 +1,4 @@
 import { Theme, useTheme } from 'app/providers/ThemeProvider';
-import * as cls from './ThemeSwitcher.module.scss';
 import { classNames } from 'shared/lib/classNames/classNames';
 import LigthIcon from 'shared/essets/icons/icnon_day_night.svg'
 import DarkhIcon from 'shared/essets/icons/icnon_night_day.svg'
