@@ -9,6 +9,7 @@ import { Sidebar } from 'widgets/Sidebar';
 
 const App = () => {
     const { theme } = useTheme()
+    
     return (
         <div className={classNames('app', {}, [theme])}>
             <Navbar />
@@ -16,7 +17,7 @@ const App = () => {
                 <Sidebar />
                 <AppRouter/>
             </div>
-
+        
         </div> 
     );
 }

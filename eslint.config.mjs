@@ -61,6 +61,13 @@ export default defineConfig([
           "args": "after-used",
           "argsIgnorePattern": "^_"
         }
+      ],
+      "@typescript-eslint/no-unused-vars": [
+        "warn",
+        {
+          "argsIgnorePattern": "^_",
+          "varsIgnorePattern": "^_"
+        }
       ]
     },
     extends: ["js/recommended"]

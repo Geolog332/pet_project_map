@@ -9,6 +9,7 @@ module.exports = {
     'rule-empty-line-before': 'always-multi-line',
     'no-duplicate-selectors': true,
     'no-empty-source': true,
-    'no-descending-specificity': true
+    'no-descending-specificity': true,
+    "number-max-precision": 5,
   }
 };

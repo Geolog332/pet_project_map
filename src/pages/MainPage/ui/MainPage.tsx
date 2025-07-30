@@ -1,9 +1,11 @@
+import { BugButton } from 'app/providers/ErrorBoundary';
 import React from 'react';
 
 const MainPage = () => {
     return (
         <div>
-            MAIN PAGE
+            <BugButton />
+            Главная страница
         </div>
     );
 }
