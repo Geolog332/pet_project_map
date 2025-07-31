@@ -2,6 +2,7 @@ import HtmlWebpackPlugin from "html-webpack-plugin";
 import webpack from "webpack";
 import { BuildOptions } from "./types/config";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
+import {BundleAnalyzerPlugin} from 'webpack-bundle-analyzer';
 
 export function buildPlugins(options: BuildOptions) {
     
@@ -15,5 +16,8 @@ export function buildPlugins(options: BuildOptions) {
             chunkFilename: "css/[name].[contenhash:8].css"
         }),
         new webpack.HotModuleReplacementPlugin(),
+        new BundleAnalyzerPlugin({
+            openAnalyzer: false, // Disable automatic opening of the report
+        }), 
     ]
 }
