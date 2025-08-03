@@ -5,7 +5,7 @@ interface NotFoundPageProps {
     className?: string;
 }
 
- const NotFoundPage = ({ className }: NotFoundPageProps) => {
+const NotFoundPage = ({ className }: NotFoundPageProps) => {
     return (
         <div className={classNames(cls.NotFoundPage, {}, [className])}>
             Страница не найдена
