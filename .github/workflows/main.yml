@@ -40,3 +40,7 @@ jobs:
 
       - name: Unit testing
         run: npm run test:unit
+
+      - name: UI testing
+        run: npm run chromatic
+        
