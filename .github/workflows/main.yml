@@ -32,9 +32,6 @@ jobs:
       - name: ESlist .ts files
         run: npm run lint:fix
 
-      - name: Prettier .scss files
-        run: npm run prettier:fix
-
       - name: Stylelint .scss files
         run: npm run stylelint:fix
 
