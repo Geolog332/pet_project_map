@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react-webpack5';
 import { fn } from 'storybook/test';
 
 import { Button, SizeButton, ThemeButton } from './Button';
-import { ThemeDecorator } from 'shared/config/storubook/ThemeDecorator/ThemeDecorator';
+import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
 
 const meta = {
