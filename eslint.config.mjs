@@ -41,7 +41,7 @@ export default defineConfig([
     },
     rules: {
       "react-hooks/rules-of-hooks": "error",
-      "react-hooks/exhaustive-deps": "warn",
+      "react-hooks/exhaustive-deps": "error",
       "react/react-in-jsx-scope": "off",
       "indent": ["error", 4],
       "quotes": ["error", "single"],

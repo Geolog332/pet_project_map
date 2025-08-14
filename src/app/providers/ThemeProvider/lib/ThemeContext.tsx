@@ -12,4 +12,4 @@ export interface ThemeContextProps{
 
 export const ThemeContext = createContext<ThemeContextProps>({})
 
-export const LOCAL_STARAGE_KEY = 'theme'
+export const LOCAL_STORAGE_KEY = 'theme'
