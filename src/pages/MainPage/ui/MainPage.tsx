@@ -4,7 +4,6 @@ const MainPage = () => {
     return (
         <div>
             Главная страница
-            <Counter/>
         </div>
     );
 }

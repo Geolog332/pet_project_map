@@ -6,7 +6,6 @@ const AboutPage = () => {
     return (
         <div>
             ABOUT PAGE
-            <Counter/>
         </div>
     );
 }
