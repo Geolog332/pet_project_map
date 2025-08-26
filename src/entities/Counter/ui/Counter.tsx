@@ -1,7 +1,7 @@
-import { Button } from "shared/ui/Button/Button";
-import { counterActions } from "../model/slice/counterSlice";
-import { useDispatch, useSelector } from "react-redux";
-import { getCounterValue } from "../model/selector/getCounterValue/getCounterValue";
+import { Button } from 'shared/ui/Button/Button';
+import { counterActions } from '../model/slice/counterSlice';
+import { useDispatch, useSelector } from 'react-redux';
+import { getCounterValue } from '../model/selector/getCounterValue/getCounterValue';
 
 export const Counter = () => {
 
@@ -22,14 +22,14 @@ export const Counter = () => {
                 { counterValue }
             </h1>
             <Button 
-            onClick={increment}
-            data-testid="increment-btn"
+                onClick={increment}
+                data-testid="increment-btn"
             >
                 +
             </Button>
             <Button 
-            onClick={decrement}
-            data-testid="decrement-btn"
+                onClick={decrement}
+                data-testid="decrement-btn"
             >
                 -
             </Button>

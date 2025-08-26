@@ -1,5 +1,4 @@
 
-import { Counter } from 'entities/Counter';
 import React from 'react';
 
 const AboutPage = () => {

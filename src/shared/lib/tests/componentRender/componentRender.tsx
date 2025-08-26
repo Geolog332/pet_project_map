@@ -18,7 +18,7 @@ export function componentRender(component: ReactNode, options: componentRenderOp
     return render(
         <StoreProvider initialState={initialState}>
             <MemoryRouter initialEntries={[route]}>
-                    {component}
+                {component}
             </MemoryRouter>
         </StoreProvider>,
     );

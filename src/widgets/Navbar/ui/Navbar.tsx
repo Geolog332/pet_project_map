@@ -1,8 +1,8 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import * as cls from './Navbar.module.scss';
-import { Modal } from 'shared/ui/Modal/Modal';
 import { Button, ThemeButton } from 'shared/ui/Button/Button';
 import { useCallback, useState } from 'react';
+import { LoginModal } from 'features/AuthByUsername';
 
 interface NavbarProps {
     className?: string
@@ -11,8 +11,12 @@ interface NavbarProps {
 export const Navbar = ({ className }: NavbarProps) => {
     const [isAuthModal, setIsAuthModal] = useState(false);
 
-    const onToggleModal = useCallback(() => {
-        setIsAuthModal((prev) => !prev);
+    const onCloseModal = useCallback(() => {
+        setIsAuthModal(false)   
+    }, []);
+
+    const onShowModal = useCallback(() => {
+        setIsAuthModal(true)   
     }, []);
 
     return (
@@ -20,14 +24,15 @@ export const Navbar = ({ className }: NavbarProps) => {
             <div className={cls.links}>
                 <Button 
                     theme={ThemeButton.CLEAR_INVERTED}
-                    onClick={onToggleModal}
+                    onClick={onShowModal}
                 >
                     Войти
                 </Button>
             </div>
-            <Modal isOpen={isAuthModal} onClose={() => setIsAuthModal(false) }>
-                это тест модалки
-            </Modal>
+            <LoginModal 
+                isOpen={isAuthModal}
+                onClose={onCloseModal}
+            />
         </div>
     );
 }
