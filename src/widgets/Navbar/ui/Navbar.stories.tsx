@@ -3,6 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react-webpack5';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
 import { Navbar } from './Navbar';
+import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
 
 const meta = {
     title: 'widget/Navbar',
@@ -15,10 +16,37 @@ type Story = StoryObj<typeof meta>;
 
 export const Light: Story = {
     args: {},  
-
+    decorators: [StoreDecorator({})], 
 };
 
 export const Dark: Story = {
     args: {},  
-    decorators: [ThemeDecorator(Theme.DARK)],
+    decorators: [
+        ThemeDecorator(Theme.DARK),
+        StoreDecorator({}), 
+    ],
+};
+export const LogOutLight: Story = {
+    args: {},  
+    decorators: [StoreDecorator({        
+        user: { 
+            authData: { 
+                id: '1', 
+                username: 'testuser' 
+            } 
+        } })], 
+};
+
+export const LogOutDark: Story = {
+    args: {},  
+    decorators: [
+        ThemeDecorator(Theme.DARK),
+        StoreDecorator({        
+            user: { 
+                authData: { 
+                    id: '1', 
+                    username: 'testuser' 
+                } 
+            } }), 
+    ],
 };

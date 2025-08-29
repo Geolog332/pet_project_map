@@ -1,0 +1,13 @@
+import { DeepPartial } from '@reduxjs/toolkit';
+import { StoryFn } from '@storybook/react-webpack5';
+import { StateSchema, StoreProvider } from 'app/providers/StoreProvider';
+
+
+export const StoreDecorator = (state: DeepPartial<StateSchema>) => (StoryComponent: StoryFn) => {
+
+    return (
+        <StoreProvider initialState={state}>
+            <StoryComponent />
+        </StoreProvider>
+    );
+};

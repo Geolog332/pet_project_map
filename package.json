@@ -15,6 +15,7 @@
     "test:unit": "jest --config ./config/jest/jest.config.ts",
     "storybook": "storybook dev -p 6006 -c ./config/storybook",
     "storybook:build": "storybook build -c ./config/storybook",
+    "test:chromatic": "npx chromatic --project-token=chpt_412326f82b916d1 --force-rebuild",
     "chromatic": "npx chromatic --project-token=chpt_412326f82b916d1",
     "chromatic:ignor": "npx chromatic --project-token=chpt_412326f82b916d1 --exit-zero-on-changes",
     "chromatic:fix": "npx chromatic --project-token=chpt_412326f82b916d1 --auto-accept-changes",
@@ -83,6 +84,8 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.5",
+    "axios": "^1.11.0",
+    "cors": "^2.8.5",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-redux": "^8.1.3",
