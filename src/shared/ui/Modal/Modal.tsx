@@ -1,5 +1,5 @@
 import { classNames } from 'shared/lib/classNames/classNames';
-import * as cls from './Modal.module.scss';
+import cls from './Modal.module.scss';
 import { ReactNode, useCallback, useEffect, useRef, useState } from 'react';
 import { Portal } from '../Portal/Portal';
 import { useTheme } from 'app/providers/ThemeProvider/lib/useTheme';

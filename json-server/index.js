@@ -3,9 +3,22 @@ const jsonServer = require('json-server');
 const jwt = require('jsonwebtoken');
 const path = require('path');
 
-
 const server = jsonServer.create();
 const router = jsonServer.router(path.resolve(__dirname, 'db.json'));
+
+// Добавляем CORS middleware
+server.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', 'http://localhost:3000');
+    res.header('Access-Control-Allow-Headers', '*');
+    res.header('Access-Control-Allow-Methods', '*');
+
+    // Обрабатываем preflight-запросы (OPTIONS)
+    if (req.method === 'OPTIONS') {
+        return res.sendStatus(200);
+    }
+
+    next();
+});
 
 // Искусственная задержка
 server.use(async (req, res, next) => {
@@ -18,7 +31,7 @@ server.use(async (req, res, next) => {
 // Middleware для парсинга JSON
 server.use(jsonServer.bodyParser);
 
-// Эндпоинт для логина (должен быть ДО проверки авторизации)
+// Эндпоинт для логина
 server.post('/login', (req, res) => {
     const { username, password } = req.body;
     const db = JSON.parse(fs.readFileSync(path.resolve(__dirname, 'db.json'), 'UTF-8'));
@@ -35,9 +48,9 @@ server.post('/login', (req, res) => {
     return res.status(403).json({ message: "AUTH ERROR" });
 });
 
-// Middleware проверки авторизации (исключаем /login)
+// Middleware проверки авторизации (исключаем /login и OPTIONS-запросы)
 server.use((req, res, next) => {
-    if (req.path === '/login') {
+    if (req.path === '/login' || req.method === 'OPTIONS') {
         return next();
     }
 
@@ -48,7 +61,6 @@ server.use((req, res, next) => {
     next();
 });
 
-server.use(jsonServer.defaults());
 server.use(router);
 
 server.listen(8000, () => {

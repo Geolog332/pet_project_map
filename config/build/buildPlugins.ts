@@ -11,18 +11,28 @@ export function buildPlugins({paths, isDev}: BuildOptions): webpack.WebpackPlugi
         }),
         new webpack.ProgressPlugin(),
         new MiniCssExtractPlugin({
-            filename: "css/[name].[contenhash:8].css", 
-            chunkFilename: "css/[name].[contenhash:8].css"
+        filename: "css/[name].[contenthash:8].css", 
+        chunkFilename: "css/[name].[contenthash:8].css"
         }),
     ];
+
 
     if (isDev) {
         plugins.push(        
     new webpack.HotModuleReplacementPlugin(),
-    new BundleAnalyzerPlugin({
-        openAnalyzer: false, // Disable automatic opening of the report
-        }), 
     )
+    }
+
+    if (!isDev) {
+        plugins.push(
+            new BundleAnalyzerPlugin({
+                analyzerMode: 'server',
+                openAnalyzer: true,
+                analyzerPort: 'auto',
+                generateStatsFile: true,
+                statsFilename: 'bundle-stats.json',
+            })
+        );
     }
 
 

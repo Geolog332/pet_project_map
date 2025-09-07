@@ -1,5 +1,5 @@
 import { classNames } from 'shared/lib/classNames/classNames';
-import * as cls from './LoginForm.module.scss';
+import cls from './LoginForm.module.scss';
 import { Button, ThemeButton } from 'shared/ui/Button/Button';
 import { Input } from 'shared/ui/Input/Input';
 import { memo, useCallback } from 'react';
@@ -9,11 +9,11 @@ import { loginByUsername } from '../../model/services/loginByUsername/loginByUse
 import { useAppDispatch, useAppSelector } from 'shared/lib/hooks/hookDispatch';
 import { Text, TextTheme } from 'shared/ui/Text/Text';
 
-interface LoginFormProps {
+export interface LoginFormProps {
     className?: string;
 }
 
-export const LoginForm = memo(({ className }: LoginFormProps) => {
+const LoginForm = memo(({ className }: LoginFormProps) => {
     const dispatch = useAppDispatch(); // Используем кастомный dispatch
     const { username, password, error, isLoading } = useAppSelector(getLoginState); // И кастомный selector
 
@@ -59,3 +59,5 @@ export const LoginForm = memo(({ className }: LoginFormProps) => {
         </div>
     );
 });
+
+export default LoginForm;

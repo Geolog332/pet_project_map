@@ -13,7 +13,8 @@ export function buildWebpackConfig(options: BuildOptions): webpack.Configuration
         mode: mode,
         entry: paths.entry,
         output: {
-            filename: '[name].[contenthash].js',
+            filename: isDev ? '[name].js' : '[name].[contenthash].js',
+            chunkFilename: isDev ? '[name].chunk.js' : '[name].[contenthash].chunk.js',
             path: paths.build,
             clean: true,
         },
@@ -24,5 +25,10 @@ export function buildWebpackConfig(options: BuildOptions): webpack.Configuration
         resolve: buildResolve(options),
         devtool: isDev ? 'eval-cheap-source-map' : undefined,
         devServer: isDev ? buildDevServer(options) : undefined,
+        optimization: {
+            splitChunks: {
+                chunks: 'all'
+            }
+        },
     }
 }

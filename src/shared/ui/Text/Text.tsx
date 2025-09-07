@@ -1,5 +1,5 @@
 import { classNames } from 'shared/lib/classNames/classNames';
-import * as cls from './Text.module.scss';
+import cls from './Text.module.scss';
 
 export enum TextTheme {
     PRIMARY = 'primary',
@@ -22,7 +22,7 @@ export const Text = (props: TextProps) => {
         theme = TextTheme.PRIMARY,
     } = props
     return (
-        <div className={classNames(cls.Text, { [cls[theme]]: true }, [className])}>
+        <div className={classNames('', { [cls[theme]]: true }, [className])}>
             {titel && <p className= {cls.titel}>{titel}</p>}
             {text && <p className= {cls.text}>{text}</p>}
         </div>

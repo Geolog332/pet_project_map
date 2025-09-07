@@ -1,5 +1,5 @@
 import { classNames } from 'shared/lib/classNames/classNames';
-import * as cls from './PageError.module.scss';
+import cls from './PageError.module.scss';
 import { Button } from 'shared/ui/Button/Button';
 
 interface PageErrorProps {
