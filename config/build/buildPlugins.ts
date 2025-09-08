@@ -20,22 +20,16 @@ export function buildPlugins({paths, isDev}: BuildOptions): webpack.WebpackPlugi
     if (isDev) {
         plugins.push(        
     new webpack.HotModuleReplacementPlugin(),
-    )
-    }
-
-    if (!isDev) {
+    ),
         plugins.push(
-            new BundleAnalyzerPlugin({
-                analyzerMode: 'server',
-                openAnalyzer: true,
-                analyzerPort: 'auto',
-                generateStatsFile: true,
-                statsFilename: 'bundle-stats.json',
-            })
-        );
+    new BundleAnalyzerPlugin({
+        analyzerMode: 'server',
+        openAnalyzer: true,
+        analyzerPort: 'auto',
+        generateStatsFile: true,
+        statsFilename: 'bundle-stats.json',
+    })
+    );
     }
-
-
-
     return plugins;
 }

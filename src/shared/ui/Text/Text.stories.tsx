@@ -15,14 +15,14 @@ type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
     args: {
-        titel: 'Titel loren ipsum',
+        title: 'Title loren ipsum',
         text: 'Description loren ipsum',
     },
 };
 
 export const Error: Story = {
     args: {
-        titel: 'Titel loren ipsum',
+        title: 'Title loren ipsum',
         text: 'Description loren ipsum',
         theme: TextTheme.ERROR,
     },
@@ -30,7 +30,7 @@ export const Error: Story = {
 
 export const onlyTitel: Story = {
     args: {
-        titel: 'Titel loren ipsum',
+        title: 'Title loren ipsum',
     },
 };
 
@@ -42,7 +42,7 @@ export const onlyText: Story = {
 
 export const PrimaryDark: Story = {
     args: {
-        titel: 'Titel loren ipsum',
+        title: 'Title loren ipsum',
         text: 'Description loren ipsum',
     },
     decorators: [ThemeDecorator(Theme.DARK)],
@@ -50,7 +50,7 @@ export const PrimaryDark: Story = {
 
 export const onlyTitelDark: Story = {
     args: {
-        titel: 'Titel loren ipsum',
+        title: 'Title loren ipsum',
     },
     decorators: [ThemeDecorator(Theme.DARK)],
 };
