@@ -15,18 +15,19 @@ import { DynamicModuleLoader, ReducerList } from 'shared/lib/components/DynamicM
 
 export interface LoginFormProps {
     className?: string;
+    onSuccess: () => void;
 }
 
 const initialReducers: ReducerList = {
     loginForm: loginReducer,
 }
 
-const LoginForm = memo(({ className }: LoginFormProps) => {
+const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
     const dispatch = useAppDispatch(); // Используем кастомный dispatch
-    const username = useAppSelector(getLoginUsername);
-    const password = useAppSelector(getLoginPassword);
-    const error = useAppSelector(getLoginError);
-    const isLoading = useAppSelector(getLoginLoading);
+    const username = useAppSelector(getLoginUsername);// Используем кастомный dispatch
+    const password = useAppSelector(getLoginPassword);// Используем кастомный dispatch
+    const error = useAppSelector(getLoginError);// Используем кастомный dispatch
+    const isLoading = useAppSelector(getLoginLoading);// Используем кастомный dispatch
 
     const onChangeUsername = useCallback( (value: string) => {
         dispatch(loginActions.setUsername(value))
@@ -36,9 +37,13 @@ const LoginForm = memo(({ className }: LoginFormProps) => {
         dispatch(loginActions.setPassword(value))
     }, [dispatch]);
 
-    const onLoginClik = useCallback ( () => {
-        dispatch(loginByUsername({ username, password }));
-    }, [dispatch, username, password]);
+    const onLoginClik = useCallback(async () => {
+        const result = await dispatch(loginByUsername({ username, password }));
+    
+        if (result.meta.requestStatus === 'fulfilled') {
+            onSuccess();
+        }
+    }, [onSuccess, dispatch, username, password]);
 
     return (
         <DynamicModuleLoader 

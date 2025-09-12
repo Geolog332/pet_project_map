@@ -1,12 +1,11 @@
+import { memo } from 'react';
 
-import React from 'react';
-
-const AboutPage = () => {
+const AboutPage = memo (() => {
     return (
         <div>
-            ABOUT PAGE
+            О нас
         </div>
     );
-}
+})
 
 export default AboutPage;

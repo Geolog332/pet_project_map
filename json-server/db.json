@@ -41,6 +41,12 @@
         }
     ],
     "profile": {
-        "name": "typicode"
+        "first": "Антон",
+        "lastname": " ",
+        "age": 36,
+        "region": "Московская область",
+        "city": "Москва",
+        "username": "admin",
+        "avatar": "https://png.pngtree.com/png-clipart/20200701/original/pngtree-global-travel-aircraft-routesaviation-png-image_5412372.jpg"
     }
 }

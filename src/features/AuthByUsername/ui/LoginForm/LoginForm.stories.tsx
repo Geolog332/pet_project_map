@@ -13,17 +13,18 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
+const onSuccessMock = () => {};
 
 export const Primary: Story = {
-    args: {},
+    args: { onSuccess: onSuccessMock, },
     decorators: [StoreDecorator({ loginForm: { username: 'test', password: 'test' } })],
 };
 export const WithError: Story = {
-    args: {},
+    args: { onSuccess: onSuccessMock, },
     decorators: [StoreDecorator({ loginForm: { username: 'test', password: 'test', error: 'error' } })],
 };
 
 export const Loading: Story = {
-    args: {},
+    args: { onSuccess: onSuccessMock, },
     decorators: [StoreDecorator({ loginForm: { isLoading: true } })],
 };

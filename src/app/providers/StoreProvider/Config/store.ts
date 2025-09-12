@@ -3,7 +3,7 @@ import { ReduxStoreWithManager, StateSchema } from './StateSchema'
 import { counterReducer } from 'entities/Counter'
 import { userReducer } from 'entities/User'
 import { createReducerManager } from './reduserManager'
-import type { AnyAction, ThunkDispatch } from '@reduxjs/toolkit';
+import type { AnyAction, Dispatch, ThunkDispatch } from '@reduxjs/toolkit';
 
 export function createReduxStore(initialState?: StateSchema, asyncReducers?: ReducersMapObject<StateSchema>) {
 
@@ -26,4 +26,4 @@ export function createReduxStore(initialState?: StateSchema, asyncReducers?: Red
     return typedStore;
 }
 
-export type AppDispatch = ThunkDispatch<StateSchema, unknown, AnyAction>
+export type AppDispatch = ThunkDispatch<StateSchema, unknown, AnyAction> &   Dispatch<AnyAction> 

@@ -1,23 +1,11 @@
-import { useState } from 'react';
-import { Input } from 'shared/ui/Input/Input';
+import { memo } from 'react';
 
-const MainPage = () => {
-    const [value, setValue] = useState('');
-
-    const onChange = (val: string) => {
-        setValue(val);
-    }
-
+const MainPage = memo (() => {
     return (
         <div>
             Главная страница
-            <Input 
-                placeholder="Введите что-нибудь"
-                value={value}
-                onChange={onChange}
-            />
         </div>
     );
-}
+})
 
 export default MainPage;

@@ -1,0 +1,108 @@
+export enum Region {
+    // --- Республики ---
+    Adygea = 'Республика Адыгея',
+    AltaiRepublic = 'Республика Алтай',
+    Bashkortostan = 'Республика Башкортостан',
+    Buryatia = 'Республика Бурятия',
+    Dagestan = 'Республика Дагестан',
+    Donetsk = 'Донецкая Народная Республика',
+    Ingushetia = 'Республика Ингушетия',
+    KabardinoBalkaria = 'Кабардино-Балкарская Республика',
+    Kalmykia = 'Республика Калмыкия',
+    KarachayCherkessia = 'Карачаево-Черкесская Республика',
+    Karelia = 'Республика Карелия',
+    Komi = 'Республика Коми',
+    Crimea = 'Республика Крым',   
+    Lugansk = 'Луганская Народная Республика',
+    MariEl = 'Республика Марий Эл',
+    Mordovia = 'Республика Мордовия',
+    SakhaYakutia = 'Республика Саха (Якутия)',
+    NorthOssetiaAlania = 'Республика Северная Осетия — Алания',
+    Tatarstan = 'Республика Татарстан (Татарстан)',
+    Tuva = 'Республика Тыва',
+    Udmurtia = 'Удмуртская Республика',
+    Khakassia = 'Республика Хакасия',
+    Chechnya = 'Чеченская Республика',
+    Chuvashia = 'Чувашская Республика - Чувашия',
+
+    // --- Края ---
+    AltaiKrai = 'Алтайский край',
+    ZabaykalskyKrai = 'Забайкальский край',  
+    KamchatkaKrai = 'Камчатский край',     
+    KrasnodarKrai = 'Краснодарский край',
+    KrasnoyarskKrai = 'Красноярский край',
+    PrimorskyKrai = 'Приморский край',
+    PermKrai = 'Пермский край',    
+    StavropolKrai = 'Ставропольский край',
+    KhabarovskKrai = 'Хабаровский край',
+
+    // --- Области ---
+    AmurOblast = 'Амурская область',
+    ArkhangelskOblast = 'Архангельская область',
+    AstrakhanOblast = 'Астраханская область',
+    BelgorodOblast = 'Белгородская область',
+    BryanskOblast = 'Брянская область',
+    VladimirOblast = 'Владимирская область',
+    VolgogradOblast = 'Волгоградская область',
+    VologdaOblast = 'Вологодская область',
+    VoronezhOblast = 'Воронежская область',
+    ZaporozhskayaOblast = 'Запорожская область',
+    IvanovoOblast = 'Ивановская область',
+    IrkutskOblast = 'Иркутская область',
+    KaliningradOblast = 'Калининградская область',
+    KalugaOblast = 'Калужская область',
+    KemerovoOblast = 'Кемеровская область - Кузбасс',
+    KirovOblast = 'Кировская область',
+    KostromaOblast = 'Костромская область',
+    KurganOblast = 'Курганская область',
+    KurskOblast = 'Курская область',
+    LeningradOblast = 'Ленинградская область',
+    LipetskOblast = 'Липецкая область',
+    MagadanOblast = 'Магаданская область',
+    MoscowOblast = 'Московская область',
+    MurmanskOblast = 'Мурманская область',
+    NizhnyNovgorodOblast = 'Нижегородская область',
+    NovgorodOblast = 'Новгородская область',
+    NovosibirskOblast = 'Новосибирская область',
+    OmskOblast = 'Омская область',
+    OrenburgOblast = 'Оренбургская область',
+    OryolOblast = 'Орловская область',
+    PenzaOblast = 'Пензенская область',
+    PskovOblast = 'Псковская область',
+    RostovOblast = 'Ростовская область',
+    RyazanOblast = 'Рязанская область',
+    SamaraOblast = 'Самарская область',
+    SaratovOblast = 'Саратовская область',
+    SakhalinOblast = 'Сахалинская область',
+    SverdlovskOblast = 'Свердловская область',
+    SmolenskOblast = 'Смоленская область',
+    TambovOblast = 'Тамбовская область',
+    TverOblast = 'Тверская область',
+    TomskOblast = 'Томская область',
+    TulaOblast = 'Тульская область',
+    TyumenOblast = 'Тюменская область',
+    UlyanovskOblast = 'Ульяновская область',
+    ChersonskayaOblast = 'Херсонская область',
+    ChelyabinskOblast = 'Челябинская область',
+    YaroslavlOblast = 'Ярославская область',
+
+    // --- Города федерального значения ---
+    Moscow = 'Город Москва',
+    SaintPetersburg = 'Город Санкт-Петербург',
+    Sevastopol = 'Город Севастополь',
+
+    // --- Автономная область ---
+    JewishAutonomousOblast = 'Еврейская автономная область',
+
+    // --- Автономные округа ---
+    NenetsAutonomousOkrug = 'Ненецкий автономный округ',
+    KhantyMansiAutonomousOkrug = 'Ханты-Мансийский автономный округ — Югра',
+    ChukotkaAutonomousOkrug = 'Чукотский автономный округ',
+    YamaloNenetsAutonomousOkrug = 'Ямало-Ненецкий автономный округ'
+}
+
+
+
+
+
+
